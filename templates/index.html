@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Home Page</title>
+	</head>
+	<body>
+		<h1>FAKE NEWS DETECTION</h1>
+		<p> Post your article on the box below</p>
+	
+	<form action="{{ url_for('detect_article')}}" method="post">
+		<div>
+			<input type="text" name="article" id="article" required size ="100">
+			<button type="submit" class="btn btn-primary btn-block btn-large">Detect</button>
+		</div>
+	</form>
+	
+	<br>
+	<br>
+	{{article}}
+	<h3>{{prediction_text}}<h3>
+	</body>
+</html>
